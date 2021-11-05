@@ -1,4 +1,11 @@
-const fs = require('fs');
+const chalk = require('chalk');
 
-fs.writeFileSync('notes.txt', 'This file was created by Node.js!');
-fs.appendFileSync('notes.txt', 'My name is Nhan.');
+const command = process.argv[2];
+
+console.log(process.argv);
+
+if (command === 'add') {
+  console.log('Adding note!');
+} else if (command === 'remove') {
+  console.log('Removing note!');
+}
